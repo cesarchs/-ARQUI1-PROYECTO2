@@ -1,0 +1,121 @@
+INICIO    -> SIGNO NUM VARIABLE
+	  | NUM VARIABLE
+          | VARIABLE
+	  | NUM
+	  | SIGNO NUM
+
+VARIBALE  -> X ^ EXP INICIO
+
+SIGNO 	  -> +
+	  |  -
+
+EXP 	  -> [1-4]
+
+NUM       -> [0-9][0-9]?
+
+
+archivo_entrada db 5000 dup('$') ; VARIABLE QUE ALMACENA EL ARCHIVO EN BRUTO
+
+vector_funciones db x^2+2x-3, x^3-3x+4, x^4+2x^3+x^2-3 ; VECTOR DE FUNCIONES
+
+exponentes db 80 dup($)   ;TODOS LOS EXP DE LA FUNCION A MANIPULAR
+coeficientes db 80 dup($) ;TODOS LOS COE DE LA FUNCION A MANIPULAR
+
+
+x^2+2x-3;
+x^3-3x+4; 
+x^4+2x^3+x^2-3; 
+
+x^4 - 2x^3 + 2x^2 + x^2 - 3
+
+EXP:4 3 2 2  0
+COE:1 2 2 1 -3
+D'
+EXP:3 2 1 0
+COE:4 6 2 0
+4x^3+6x^2+2x
+
+
+EXP:4 3 2 2  0
+COE:1 2 2 1 -3
+    -3⁴ + (-3*2)³ + (2*-3)² + (-3)² + -3
+   AX⁴+BX³+CX²+DX+E
+
+X   | Y
+-3  | +15  
+-2 
+-1  
+ 0 
+ 1
+ 2
+ 3
+
+
+
+
+
+
+
+
+vector_derivadas db mismo largo esa mierda ; VECTOR DE DERIVADAS
+vector_integrales db mismo largo esa mierda ; VECTOR DE INTEGRALES
+
+funciones_meterle_mano db x^2+2x-3 ; ALMACENA LA FUNCIÓN A MANIPULAR
+
+DERIVAR 1
+d1 2x +2
+
+1: x^2-x-3
+2: x^3-3x+4
+3: x^4+2x^3+x^2-3
+
+
+
+
+
+INTEGRAR 0,1,2,3,4
+
+DERIVAR  0,1,2,3,4
+
+INGRESAR(COMPROBAR)0,1,2,3,4
+
+GRAFICAR 0,1,2,3,4
+
+RESOLVER 0,1,2
+
+ARDUINO  0,1,2
+
+
+
+
+
+
+
+INICIO -> NUM
+	| SIGNO
+	| VARIABLE
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
